@@ -104,6 +104,7 @@ with the help of a modern web framework. Use the Rest API and create components.
 * Review and update of all the organizations in memberships
 * Add idhal
 * Remplacer dans certains projets recents le financement PIA par France 2030
+* Remplacer dans certains projets recents le financement "Other EU funds" par un nouveau financement (voir les commentaires associés aux budgets)
 * Revoir la structure entre les organizations UBFC, UTBM, UB, UFC
 * Reclassifier les publications de type AP pour intégrer les nouveaux types de publications
 * Move some person emails from primary to secondary
