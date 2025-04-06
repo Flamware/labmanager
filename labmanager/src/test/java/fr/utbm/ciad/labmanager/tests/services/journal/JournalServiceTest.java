@@ -55,6 +55,7 @@ import fr.utbm.ciad.labmanager.data.journal.JournalQualityAnnualIndicators;
 import fr.utbm.ciad.labmanager.data.journal.JournalQualityAnnualIndicatorsRepository;
 import fr.utbm.ciad.labmanager.data.journal.JournalRepository;
 import fr.utbm.ciad.labmanager.data.publication.AbstractJournalBasedPublication;
+import fr.utbm.ciad.labmanager.data.publication.type.JournalEditionRepository;
 import fr.utbm.ciad.labmanager.data.publication.type.JournalPaper;
 import fr.utbm.ciad.labmanager.data.publication.type.JournalPaperRepository;
 import fr.utbm.ciad.labmanager.services.journal.JournalService;
@@ -114,6 +115,7 @@ public class JournalServiceTest {
 	private JournalNameOrPublisherComparator journalNameAndPublisherComparator;
 
 	private JournalService test;
+	private JournalEditionRepository journalEditionRepository;
 
 	@BeforeEach
 	public void setUp() {
@@ -128,7 +130,7 @@ public class JournalServiceTest {
 		this.journalNameAndPublisherComparator = mock(JournalNameOrPublisherComparator.class);
 		this.test = new JournalService(this.journalRepository,
 				this.indicatorRepository, this.publicationRepository, this.scimago, this.wos, this.netConnection, this.journalNameAndPublisherComparator,
-				this.messages, new ConfigurationConstants(), this.sessionFactory);
+				this.messages, new ConfigurationConstants(), this.sessionFactory, this.journalEditionRepository);
 
 		// Prepare some journals to be inside the repository
 		// The lenient configuration is used to configure the mocks for all the tests
@@ -669,7 +671,7 @@ public class JournalServiceTest {
 		this.netConnection = new DirectNetConnection();
 		this.test = new JournalService(this.journalRepository, this.indicatorRepository,
 				this.publicationRepository, this.scimago, this.wos, this.netConnection, this.journalNameAndPublisherComparator,
-				this.messages, new ConfigurationConstants(), this.sessionFactory);
+				this.messages, new ConfigurationConstants(), this.sessionFactory, this.journalEditionRepository);
 
 		// The following id is for the Int. Journal of Artificial Intelligence
 		when(this.jour3.getScimagoId()).thenReturn("23675");
