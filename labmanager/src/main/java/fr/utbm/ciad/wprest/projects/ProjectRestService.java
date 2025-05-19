@@ -42,6 +42,8 @@ import java.util.stream.Collectors;
  */
 @Transactional
 @RestController
+@CrossOrigin(origins = "http://localhost:3000") // Allow requests from this origin
+
 @RequestMapping("/api/v" + Constants.MANAGER_MAJOR_VERSION + "/projects")
 public class ProjectRestService {
 
