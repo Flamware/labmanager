@@ -21458,3 +21458,33 @@ Vaadin is running in DEVELOPMENT mode - do not use for production deployments.
 26-05-2025 16:44:53.666 INFO  ServiceLogoDisplayer -  . version 4.0.0
 26-05-2025 16:44:53.666 INFO  ServiceLogoDisplayer -  . ready
 26-05-2025 16:44:53.667 INFO  ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+26-05-2025 16:46:02.909 INFO  LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (1 addition, 0 deletions, 1 modification)
+26-05-2025 16:46:02.910 INFO  Http11NioProtocol - Stopping ProtocolHandler ["https-jsse-nio-8080"]
+26-05-2025 16:46:02.920 INFO  LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+26-05-2025 16:46:03.435 WARN  DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': java.sql.SQLException: Directory directory:./tmp/labmanager-tmp/db cannot be removed.
+26-05-2025 16:46:03.536 INFO  LabManagerApplication - Starting LabManagerApplication using Java 24 with PID 16120 (C:\Users\axela\IdeaProjects\labmanager\labmanager\target\classes started by axela in C:\Users\axela\IdeaProjects\labmanager\labmanager)
+26-05-2025 16:46:03.537 INFO  LabManagerApplication - The following 1 profile is active: "dev"
+26-05-2025 16:46:04.126 INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+26-05-2025 16:46:04.395 INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 268 ms. Found 32 JPA repository interfaces.
+26-05-2025 16:46:04.605 INFO  TomcatWebServer - Tomcat initialized with port 8080 (https)
+26-05-2025 16:46:04.606 INFO  Http11NioProtocol - Initializing ProtocolHandler ["https-jsse-nio-8080"]
+26-05-2025 16:46:04.606 INFO  StandardService - Starting service [Tomcat]
+26-05-2025 16:46:04.606 INFO  StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+26-05-2025 16:46:04.691 INFO  [/LabManager] - Initializing Spring embedded WebApplicationContext
+26-05-2025 16:46:04.691 INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1153 ms
+26-05-2025 16:46:05.043 INFO  SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+26-05-2025 16:46:05.064 WARN  deprecation - HHH90000025: DerbyDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+26-05-2025 16:46:05.984 INFO  LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+26-05-2025 16:46:06.264 INFO  [/LabManager] - Initializing AtmosphereFramework
+26-05-2025 16:46:07.325 INFO  VaadinServletContextInitializer - Search for subclasses and classes with annotations took 514 ms
+26-05-2025 16:46:07.335 INFO  DevModeStartupListener - Starting dev-mode updaters in C:\Users\axela\IdeaProjects\labmanager\labmanager folder.
+26-05-2025 16:46:07.347 INFO  FullDependenciesScanner - Visited 239 classes. Took 10 ms.
+26-05-2025 16:46:07.347 INFO  BundleValidationUtil - Checking if a development mode bundle build is needed
+26-05-2025 16:46:07.450 INFO  BundleValidationUtil - A development mode bundle build is not needed
+26-05-2025 16:46:07.457 INFO  TaskCopyFrontendFiles - Copying frontend resources from jar files ...
+26-05-2025 16:46:07.508 INFO  TaskCopyFrontendFiles - Visited 24 resources. Took 51 ms.
+26-05-2025 16:46:08.349 INFO  InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userSecurityService
+26-05-2025 16:46:08.479 INFO  EndpointLinksResolver - Exposing 16 endpoints beneath base path '/management'
+26-05-2025 16:46:08.710 INFO  OptionalLiveReloadServer - LiveReload server is running on port 35729
+26-05-2025 16:46:08.742 INFO  Http11NioProtocol - Starting ProtocolHandler ["https-jsse-nio-8080"]
+26-05-2025 16:46:08.790 INFO  certificate - Connector [https-jsse-nio-8080], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\axela\.keystore] using alias [springboot] with trust store [null]
