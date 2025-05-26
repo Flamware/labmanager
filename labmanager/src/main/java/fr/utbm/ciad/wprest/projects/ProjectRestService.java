@@ -42,6 +42,7 @@ import java.util.stream.Collectors;
  */
 @Transactional
 @RestController
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/api/v" + Constants.MANAGER_MAJOR_VERSION + "/projects")
 public class ProjectRestService {
 
