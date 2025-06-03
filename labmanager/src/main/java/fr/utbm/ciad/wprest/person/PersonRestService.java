@@ -30,10 +30,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.net.URL;
 import java.util.*;
@@ -57,6 +54,8 @@ import java.util.stream.Collectors;
  */
 @Transactional
 @RestController
+@CrossOrigin(origins = "http://localhost:3000") // Allow requests from this origin
+
 @RequestMapping("/api/v" + Constants.MANAGER_MAJOR_VERSION + "/persons")
 public class PersonRestService {
 
