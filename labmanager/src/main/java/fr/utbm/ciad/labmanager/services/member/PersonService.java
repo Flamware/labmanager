@@ -48,6 +48,7 @@ import fr.utbm.ciad.labmanager.utils.io.wos.WebOfSciencePlatform.WebOfSciencePer
 import fr.utbm.ciad.labmanager.utils.names.PersonNameComparator;
 import fr.utbm.ciad.labmanager.utils.names.PersonNameParser;
 import fr.utbm.ciad.labmanager.utils.phone.PhoneNumber;
+
 import org.apache.commons.lang3.mutable.MutableInt;
 import org.apache.jena.vocabulary.VOID;
 import org.arakhne.afc.progress.DefaultProgression;

@@ -38,6 +38,7 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+
 import com.vaadin.flow.internal.LocaleUtil;
 import fr.utbm.ciad.labmanager.configuration.ConfigurationConstants;
 import fr.utbm.ciad.labmanager.data.member.MemberStatus;

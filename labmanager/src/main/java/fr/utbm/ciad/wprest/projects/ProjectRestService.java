@@ -42,6 +42,7 @@ import java.util.stream.Collectors;
  */
 @Transactional
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api/v" + Constants.MANAGER_MAJOR_VERSION + "/projects")
 public class ProjectRestService {
 
@@ -128,7 +129,12 @@ public class ProjectRestService {
         ResearchOrganization superOrganization = project.getSuperOrganization();
         String superOrganizationName = superOrganization.getName();
         String learOrganizationName = project.getLearOrganization().getName();
-        String localOrganizationName = project.getLocalOrganization().getName();
+        String localOrganizationName = "Organisation inconnue";
+        try {
+            localOrganizationName = (project.getLocalOrganization().getName() != null) ? project.getLocalOrganization().getName() : "Organisation inconnue";
+        } catch (Exception e) {
+            localOrganizationName = "Organisation inconnue ou non renseignée";
+        }
 
         List<ResearchOrganization> partners = project.getOtherPartners();
         List<String> partnersNames = new ArrayList<>();
@@ -231,5 +237,28 @@ public class ProjectRestService {
         }
 
         return participantsData;
+    }
+
+    /**
+     * Get all projects by person id
+     * @param personId - the id of the person
+     * @return - the list of projects associated to the person
+     */
+
+    @Operation(summary = "Gets all projects by person id",
+            description = "Gets the list of projects associated to the person with the given id",
+            tags = {"Project API"},
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "The list of projects associated to the person",
+                    content = @Content(schema = @Schema(implementation = ProjectDataDto.class), array = @ArraySchema(schema = @Schema(implementation = ProjectDataDto.class)))),
+                    @ApiResponse(responseCode = "404", description = "No project found for the given person id"),
+            })
+    @GetMapping("/byPersonId/{personId}")
+    public ResponseEntity<?> getProjectsByPersonId(
+            @PathVariable Long personId
+    ) {
+        Set<Project> projects = projectService.getProjectsByPersonId(personId);
+
+        return ResponseEntity.ok(getPublicProjectsFromList(new ArrayList<>(projects)));
     }
 }
