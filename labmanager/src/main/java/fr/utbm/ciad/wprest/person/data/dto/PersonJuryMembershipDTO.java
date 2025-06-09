@@ -18,6 +18,7 @@ import java.util.List;
  */
 public record PersonJuryMembershipDTO(String title,
                                       int year,
+                                      long candidateId,
                                       PersonOnWebsite candidate,
                                       List<PersonOnWebsite> directors,
                                       JuryType type,

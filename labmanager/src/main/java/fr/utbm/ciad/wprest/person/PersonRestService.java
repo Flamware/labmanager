@@ -13,6 +13,8 @@ import fr.utbm.ciad.labmanager.data.organization.ResearchOrganization;
 import fr.utbm.ciad.labmanager.data.supervision.Supervision;
 import fr.utbm.ciad.labmanager.data.supervision.Supervisor;
 import fr.utbm.ciad.labmanager.data.supervision.SupervisorType;
+import fr.utbm.ciad.labmanager.data.teaching.TeachingActivity;
+import fr.utbm.ciad.labmanager.services.teaching.TeachingService;
 import fr.utbm.ciad.labmanager.services.member.MembershipService;
 import fr.utbm.ciad.labmanager.services.member.PersonService;
 import fr.utbm.ciad.labmanager.services.supervision.SupervisionService;
@@ -28,6 +30,8 @@ import fr.utbm.ciad.wprest.person.data.dto.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+
+import org.odftoolkit.odfdom.type.CountryCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -43,10 +47,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+
+
 import org.springframework.http.MediaType;
 import org.springframework.http.HttpMethod;
 
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -73,16 +80,19 @@ import java.util.stream.Collectors;
 public class PersonRestService {
 
     private final PersonService personService;
+    private final TeachingService teachingService;
     private final SupervisionService supervisionService;
     private final MembershipService membershipService;
     private final org.springframework.context.support.MessageSourceAccessor messageSourceAccessor;
 
     public PersonRestService(
             @Autowired PersonService personService,
+            @Autowired TeachingService teachingService,
             @Autowired SupervisionService supervisionService,
             @Autowired MembershipService membershipService,
             @Autowired org.springframework.context.support.MessageSourceAccessor messageSourceAccessor) {
         this.personService = personService;
+        this.teachingService = teachingService;
         this.supervisionService = supervisionService;
         this.membershipService = membershipService;
         this.messageSourceAccessor = messageSourceAccessor;
@@ -370,7 +380,9 @@ public class PersonRestService {
 
             UniversityData university = new UniversityData(universityName, universityCountry, inFrance);
 
-            personInvitations.get(type).add(new PersonInvitationData(invitation.getTitle(), guestData, university, dates));
+            long guestId = invitation.getGuest().getId();
+
+            personInvitations.get(type).add(new PersonInvitationData(invitation.getTitle(), guestId, guestData, university, dates));
 
         }
 
@@ -525,7 +537,9 @@ public class PersonRestService {
 
         JuryType type = jury.getDefenseType();
 
-        return new PersonJuryMembershipDTO(title, year, candidate, promotersOrDirectorsNames, type, university);
+        long candidateId = jury.getCandidate().getId();
+
+        return new PersonJuryMembershipDTO(title, year, candidateId, candidate, promotersOrDirectorsNames, type, university);
     }
 
     /**
@@ -559,7 +573,9 @@ public class PersonRestService {
             supervisionType = personSupervisorData.get().type();
         }
 
-       return new SupervisionsDTO(title, supervisedPerson, year, supervisionType, organisation, supervisorsData);
+        long supervisedPersonId = supervision.getSupervisedPerson().getPerson().getId();
+
+       return new SupervisionsDTO(title, supervisedPersonId, supervisedPerson, year, supervisionType, organisation, supervisorsData);
     }
 
     /**
@@ -696,6 +712,39 @@ public class PersonRestService {
         );
 
         return response.getBody();
+    }
+
+    @Operation(summary = "Get all teaching from a person", description = "Get all person", tags = {"Person API"})
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "The list of all teaching for a person in the database"),
+            @ApiResponse(responseCode = "400", description = "Bad request"),
+            @ApiResponse(responseCode = "404", description = "Not found")
+    })
+    @GetMapping("/getTeaching/{id}")
+    
+    public ResponseEntity<List<PersonTeachingDTO>> getAllTeaching(@PathVariable long id) {
+
+        Person person = personService.getPersonById(id);
+        List<TeachingActivity> teachingActivities = teachingService.getActivitiesByPersonId(person);
+        List<PersonTeachingDTO> personTeachingList = teachingActivities.stream()
+                .map(this::getPersonTeachingDTO)
+                .collect(Collectors.toList());
+
+        return ResponseEntity.ok(personTeachingList);
+    }
+
+        public PersonTeachingDTO getPersonTeachingDTO(TeachingActivity teachingActivity) {
+        if (teachingActivity == null) {
+            return null;
+        }
+        String code = teachingActivity.getCode();
+        String Title = teachingActivity.getTitle();
+        String degree = teachingActivity.getDegree();
+        ResearchOrganization university = teachingActivity.getUniversity();
+        LocalDate startDate = teachingActivity.getStartDate();
+        fr.utbm.ciad.labmanager.utils.country.CountryCode language = teachingActivity.getLanguage();
+
+        return new PersonTeachingDTO(code, Title, degree, university, startDate, language.name());
     }
 
 }

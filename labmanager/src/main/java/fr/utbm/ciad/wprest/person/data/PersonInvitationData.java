@@ -12,6 +12,7 @@ import fr.utbm.ciad.wprest.data.PersonOnWebsite;
  * @param dates      the date range for the invitation
  */
 public record PersonInvitationData(String title,
+                                    long guestId,
                                    PersonOnWebsite guest,
                                    UniversityData university,
                                    DateRange dates) {
