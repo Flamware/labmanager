@@ -23,6 +23,7 @@ import java.util.List;
  * @param isDone - true if the project is done
  */
 public record ProjectDataDto(String acronym,
+                             long id,
                              String title,
                              String description,
                              DateRange date,

@@ -42,7 +42,9 @@ import java.util.stream.Collectors;
  */
 @Transactional
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+
+
+@CrossOrigin(origins = "http://localhost:3000") // Allow requests from this origin
 @RequestMapping("/api/v" + Constants.MANAGER_MAJOR_VERSION + "/projects")
 public class ProjectRestService {
 
@@ -103,9 +105,8 @@ public class ProjectRestService {
     ) {
         List<Project> projects = projectService.getAllProjects();
         return getPublicProjectsFromList(projects);
+
     }
-
-
     /**
      * Get all public projects data from a given list
      * @param projects - the list of projects to extract data from
@@ -153,6 +154,7 @@ public class ProjectRestService {
         String acronym = project.getAcronym();
         String title = project.getScientificTitle();
         String description = project.getDescription();
+        long id = project.getId();
 
         DateRange date = getProjectDates(project);
 
@@ -172,7 +174,7 @@ public class ProjectRestService {
         boolean openSource = project.isOpenSource();
         boolean isDone = date.endDate() != null && (LocalDate.now().isAfter(date.endDate()));
 
-        return new ProjectDataDto(acronym, title, description, date, organizationData, participantsData,
+        return new ProjectDataDto(acronym,id, title, description, date, organizationData, participantsData,
                 images, logo, links, webpageId, openSource, isDone);
     }
 
@@ -239,6 +241,7 @@ public class ProjectRestService {
         return participantsData;
     }
 
+
     /**
      * Get all projects by person id
      * @param personId - the id of the person
@@ -261,4 +264,5 @@ public class ProjectRestService {
 
         return ResponseEntity.ok(getPublicProjectsFromList(new ArrayList<>(projects)));
     }
+
 }

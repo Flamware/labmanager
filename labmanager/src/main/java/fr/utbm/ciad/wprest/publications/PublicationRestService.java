@@ -11,6 +11,7 @@ import fr.utbm.ciad.labmanager.services.organization.ResearchOrganizationService
 import fr.utbm.ciad.labmanager.services.publication.PublicationService;
 import fr.utbm.ciad.wprest.data.PersonOnWebsite;
 import fr.utbm.ciad.wprest.publications.data.dto.PublicationsDTO;
+import fr.utbm.ciad.wprest.publications.data.dto.PublicationsFrontDto;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -19,10 +20,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.*;
@@ -44,6 +42,8 @@ import java.util.stream.Collectors;
  */
 @Transactional
 @RestController
+@CrossOrigin(origins = "http://localhost:3000") // Allow requests from this origin
+
 @RequestMapping("/api/v" + Constants.MANAGER_MAJOR_VERSION + "/publications")
 public class PublicationRestService {
 
@@ -60,6 +60,35 @@ public class PublicationRestService {
         this.researchOrganizationService = researchOrganizationService;
     }
 
+
+
+
+    /**
+     * Retrieves all publications, including both public and private ones.
+     *
+     * <p>This endpoint returns a list of all available publications. If no publications are found,
+     * a 404 Not Found response is returned.</p>
+     *
+     * @return a {@link ResponseEntity} containing a list of {@link PublicationsFrontDto} objects if found,
+     *         or a 404 Not Found response if the list is empty.
+     *
+     * @see PublicationsFrontDto
+     */
+    @GetMapping("/all")
+    @Operation(summary = "Gets all publications", description = "Gets all publications, either public or private", tags = {"Publication API"})
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "The publications", content = @Content(schema = @Schema(implementation = PublicationsFrontDto.class))),
+            @ApiResponse(responseCode = "404", description = "Not Found if no publications are found.")
+    })
+    public ResponseEntity<List<PublicationsFrontDto>> getAllPublications() {
+        List<Publication> publicationList = publicationService.getAllPublications();
+        if (publicationList.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+
+        List<PublicationsFrontDto> publications = gePublicationsFrontDtos(publicationList, null, null, null);
+        return ResponseEntity.ok(publications);
+    }
 
     /**
      * Retrieves a list of publications for a specified person, allowing for optional filtering by year, language, and keywords.
@@ -204,6 +233,60 @@ public class PublicationRestService {
 
             publications.add(new PublicationsDTO(title, doi, issn, publicationDate, publicationType, authorsPersons, abstractText, pdfUrl,
                     publication.getMajorLanguage(), containedKeywordsList));
+        }
+
+        return publications;
+    }
+
+    /**
+     * Converts a collection of {@link Publication} objects into a list of {@link PublicationsFrontDto} objects,
+     * applying optional filtering based on year, language, and keywords.
+     *
+     * @param publicationList the collection of {@link Publication} objects to convert
+     * @param year the publication year to filter by (nullable)
+     * @param language the language to filter by (nullable)
+     * @param keywords the keywords to filter by (nullable, comma or semicolon separated)
+     * @return a list of {@link PublicationsFrontDto} objects representing the filtered and mapped publications
+     */
+    public List<PublicationsFrontDto> gePublicationsFrontDtos(Collection<Publication> publicationList,
+                                                                  Long year,
+                                                                  String language,
+                                                                  String keywords) {
+        List<PublicationsFrontDto> publications = new ArrayList<>();
+
+        for (Publication publication : publicationList) {
+            if (filterPublication(publication, year, language, keywords)) {
+                continue;
+            }
+
+            // get keywords as list
+            List<String> containedKeywordsList = new ArrayList<>();
+            if (publication.getKeywords() != null) {
+                containedKeywordsList = Arrays.asList(publication.getKeywords().split("[,;]"));
+            }
+
+            //get the list of authors name and webpageId
+            List<Person> authorsList = new ArrayList<>(publication.getAuthors());
+            List<PersonOnWebsite> authorsPersons = authorsList.stream()
+                    .map(author -> new PersonOnWebsite(author.getFullName(), author.getWebPageId()))
+                    .collect(Collectors.toList());
+
+            String title = publication.getTitle();
+            LocalDate publicationDate = publication.getPublicationDate();
+            PublicationType publicationType = publication.getType();
+            String abstractText = publication.getAbstractText();
+            String pdfUrl = publication.getPathToDownloadablePDF();
+            String doi = publication.getDOI();
+            String issn = publication.getISSN();
+            String extraUrl = publication.getExtraURL();
+            String dblpUrl = publication.getDblpURL();
+            String awardCertificate = publication.getPathToDownloadableAwardCertificate();
+
+
+            publications.add(new PublicationsFrontDto(publicationType, title, doi, issn, publicationDate,
+                    authorsPersons, abstractText, extraUrl,
+                    dblpUrl, pdfUrl, awardCertificate, publication.getMajorLanguage(),
+                    containedKeywordsList));
         }
 
         return publications;
