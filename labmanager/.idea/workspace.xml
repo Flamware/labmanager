@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f6edae4a-0310-40b0-ac77-b7b5f985ede6" name="Changes" comment="feat: Ajoute .gitignore pour exclure les fichiers IntelliJ IDEA&#10;&#10;Ajoute un fichier `.gitignore` pour exclure les fichiers spécifiques à IntelliJ IDEA du suivi Git. Cela inclut les fichiers de configuration locaux, les fichiers de workspace et les fichiers de données sources, assurant ainsi que seuls les fichiers pertinents du projet sont versionnés.">
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/utbm/ciad/wprest/projects/ProjectRestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/utbm/ciad/wprest/projects/ProjectRestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/utbm/ciad/wprest/projects/data/dto/ProjectDataDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/utbm/ciad/wprest/projects/data/dto/ProjectDataDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/LabManagerApi.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/LabManagerApi.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/log/log.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/log/log3.dat" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/log/log3.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/log/logmirror.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c720.dat" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c720.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c7b0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c7b0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cb51.dat" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cb51.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cbf1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cbf1.dat" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2xKXCdKYaAJGW7n1kxYqVMfkyNO" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;Spring Boot.LabManagerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;axel&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;derby&quot;
+    ]
+  }
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="LabManagerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="dev" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="labmanager" />
+      <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.utbm.ciad.labmanager.LabManagerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f6edae4a-0310-40b0-ac77-b7b5f985ede6" name="Changes" comment="No file selected" />
+      <created>1747687613861</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747687613861</updated>
+      <workItem from="1747687615849" duration="71000" />
+      <workItem from="1747725769195" duration="4000" />
+      <workItem from="1748259008964" duration="994000" />
+      <workItem from="1748269548978" duration="92000" />
+      <workItem from="1748269709786" duration="5012000" />
+      <workItem from="1748439649263" duration="307000" />
+      <workItem from="1748601450060" duration="6000" />
+      <workItem from="1748942506915" duration="135000" />
+    </task>
+    <task id="LOCAL-00001" summary="chore: Mise à jour des fichiers de log.&#10;&#10;Mise à jour des fichiers `log.ctrl`, `logmirror.ctrl` et `log3.dat`.&#10;&#10;Ces fichiers semblent contenir des données de log ou de configuration de log.&#10;La nature exacte des modifications est inconnue sans un examen plus approfondi du contenu des fichiers.&#10;Aucun changement cassant n'est apparent.">
+      <option name="closed" value="true" />
+      <created>1748270540525</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1748270540525</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: Ajoute l'annotation @CrossOrigin à ProjectRestService&#10;&#10;Ajoute l'annotation @CrossOrigin(origins = &quot;*&quot;, maxAge = 3600)&#10;à la classe ProjectRestService pour permettre les requêtes CORS&#10;depuis n'importe quelle origine. Cela simplifie le développement&#10;et le test de l'application en permettant aux clients d'accéder&#10;à l'API depuis n'importe quel domaine sans avoir à configurer&#10;des exceptions CORS spécifiques.">
+      <option name="closed" value="true" />
+      <created>1748270726914</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1748270726914</updated>
+    </task>
+    <task id="LOCAL-00003" summary="chore: Nettoyer le dossier tmp et ajouter .gitignore&#10;&#10;Ce commit effectue les actions suivantes :&#10;&#10;- Ajoute un fichier .gitignore pour ignorer les fichiers temporaires, les logs et les fichiers de base de données Derby.&#10;- Supprime de nombreux fichiers .dat et autres fichiers temporaires du dossier tmp/labmanager-tmp/db. Ces fichiers sont générés dynamiquement et ne doivent pas être suivis par Git.&#10;- Met à jour le fichier LabManagerApi.log avec les informations les plus récentes sur le redémarrage.&#10;&#10;Ces changements ont pour but de réduire la taille du dépôt Git et d'éviter de suivre des fichiers inutiles. La suppression des fichiers .dat du dossier tmp n'impacte pas le fonctionnement de l'application, car ils sont recréés au besoin.">
+      <option name="closed" value="true" />
+      <created>1748270991167</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1748270991167</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: Ajoute ImageRestController pour servir les images&#10;&#10;Ce commit ajoute un nouveau contrôleur, `ImageRestController`, qui permet de servir des images stockées dans le répertoire `tmp/labmanager-tmp/Downloadables/`.&#10;&#10;Le contrôleur expose un endpoint `/api/v{version}/images/{folder}/{imageName}` qui prend en paramètre le nom du dossier et le nom de l'image. Il renvoie l'image avec le type MIME approprié (JPEG, PNG ou GIF).&#10;&#10;Cette fonctionnalité est nécessaire pour afficher les images téléchargées par l'utilisateur dans l'interface web.&#10;&#10;Pas de changements cassants.">
+      <option name="closed" value="true" />
+      <created>1748271038171</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1748271038171</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: Ajoute .gitignore pour exclure les fichiers IntelliJ IDEA&#10;&#10;Ajoute un fichier `.gitignore` pour exclure les fichiers spécifiques à IntelliJ IDEA du suivi Git. Cela inclut les fichiers de configuration locaux, les fichiers de workspace et les fichiers de données sources, assurant ainsi que seuls les fichiers pertinents du projet sont versionnés.">
+      <option name="closed" value="true" />
+      <created>1748271220138</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1748271220138</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="No file selected" />
+    <MESSAGE value="chore: Mise à jour des fichiers de log.&#10;&#10;Mise à jour des fichiers `log.ctrl`, `logmirror.ctrl` et `log3.dat`.&#10;&#10;Ces fichiers semblent contenir des données de log ou de configuration de log.&#10;La nature exacte des modifications est inconnue sans un examen plus approfondi du contenu des fichiers.&#10;Aucun changement cassant n'est apparent." />
+    <MESSAGE value="feat: Ajoute l'annotation @CrossOrigin à ProjectRestService&#10;&#10;Ajoute l'annotation @CrossOrigin(origins = &quot;*&quot;, maxAge = 3600)&#10;à la classe ProjectRestService pour permettre les requêtes CORS&#10;depuis n'importe quelle origine. Cela simplifie le développement&#10;et le test de l'application en permettant aux clients d'accéder&#10;à l'API depuis n'importe quel domaine sans avoir à configurer&#10;des exceptions CORS spécifiques." />
+    <MESSAGE value="Generating commit message..." />
+    <MESSAGE value="feat: Ajoute ImageRestController pour servir les images&#10;&#10;Ce commit ajoute un nouveau contrôleur, `ImageRestController`, qui permet de servir des images stockées dans le répertoire `tmp/labmanager-tmp/Downloadables/`.&#10;&#10;Le contrôleur expose un endpoint `/api/v{version}/images/{folder}/{imageName}` qui prend en paramètre le nom du dossier et le nom de l'image. Il renvoie l'image avec le type MIME approprié (JPEG, PNG ou GIF).&#10;&#10;Cette fonctionnalité est nécessaire pour afficher les images téléchargées par l'utilisateur dans l'interface web.&#10;&#10;Pas de changements cassants." />
+    <MESSAGE value="feat: Ajoute .gitignore pour exclure les fichiers IntelliJ IDEA&#10;&#10;Ajoute un fichier `.gitignore` pour exclure les fichiers spécifiques à IntelliJ IDEA du suivi Git. Cela inclut les fichiers de configuration locaux, les fichiers de workspace et les fichiers de données sources, assurant ainsi que seuls les fichiers pertinents du projet sont versionnés." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Ajoute .gitignore pour exclure les fichiers IntelliJ IDEA&#10;&#10;Ajoute un fichier `.gitignore` pour exclure les fichiers spécifiques à IntelliJ IDEA du suivi Git. Cela inclut les fichiers de configuration locaux, les fichiers de workspace et les fichiers de données sources, assurant ainsi que seuls les fichiers pertinents du projet sont versionnés." />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/fr/utbm/ciad/wprest/projects/ProjectRestService.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

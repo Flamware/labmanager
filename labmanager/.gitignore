@@ -1,0 +1,5 @@
+# Database files for embedded Derby
+tmp/
+*.log
+*.ctrl
+*.dat

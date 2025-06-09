@@ -1,0 +1,39 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]" date="1748942534281" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 03/06/2025 11:22 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="tmp/labmanager-tmp/db/seg0/cb51.dat" />
+    <option name="AFTER_PATH" value="tmp/labmanager-tmp/db/seg0/cb51.dat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/cb51.dat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="tmp/labmanager-tmp/db/seg0/c720.dat" />
+    <option name="AFTER_PATH" value="tmp/labmanager-tmp/db/seg0/c720.dat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/c720.dat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="tmp/labmanager-tmp/db/seg0/cbf1.dat" />
+    <option name="AFTER_PATH" value="tmp/labmanager-tmp/db/seg0/cbf1.dat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/cbf1.dat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="tmp/labmanager-tmp/db/log/logmirror.ctrl" />
+    <option name="AFTER_PATH" value="tmp/labmanager-tmp/db/log/logmirror.ctrl" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/logmirror.ctrl" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="tmp/labmanager-tmp/db/log/log.ctrl" />
+    <option name="AFTER_PATH" value="tmp/labmanager-tmp/db/log/log.ctrl" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/log.ctrl" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="tmp/labmanager-tmp/db/log/log3.dat" />
+    <option name="AFTER_PATH" value="tmp/labmanager-tmp/db/log/log3.dat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/log3.dat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="tmp/labmanager-tmp/db/seg0/c7b0.dat" />
+    <option name="AFTER_PATH" value="tmp/labmanager-tmp/db/seg0/c7b0.dat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/c7b0.dat" />
+  </binary>
+</changelist>

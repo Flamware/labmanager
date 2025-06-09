@@ -1,0 +1,17 @@
+Index: .idea/.copilot-plugin
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#Vaadin Copilot Integration Runtime Properties\r\n#Mon May 19 22:36:24 CEST 2025\r\nendpoint=http\\://127.0.0.1\\:63342/api/copilot-33a2a459-2baf-44e4-a421-ba0d736b4623\r\nide=intellij\r\nsupportedActions=write,writeBase64,delete,undo,redo,refresh,showInIde,getModulePaths,compileFiles,restartApplication,reloadMavenModule\r\nversion=1.4.9\r\n
+===================================================================
+diff --git a/.idea/.copilot-plugin b/.idea/.copilot-plugin
+--- a/.idea/.copilot-plugin	(revision 4cd6b6c6d7fee339963c326113f436361c0f7696)
++++ b/.idea/.copilot-plugin	(date 1747687553451)
+@@ -1,6 +1,6 @@
+ #Vaadin Copilot Integration Runtime Properties
+-#Mon May 19 22:36:24 CEST 2025
+-endpoint=http\://127.0.0.1\:63342/api/copilot-33a2a459-2baf-44e4-a421-ba0d736b4623
++#Mon May 19 22:45:53 CEST 2025
++endpoint=http\://127.0.0.1\:63342/api/copilot-483ad9fe-d654-45fd-8a9d-6b32062d14a1
+ ide=intellij
+ supportedActions=write,writeBase64,delete,undo,redo,refresh,showInIde,getModulePaths,compileFiles,restartApplication,reloadMavenModule
+ version=1.4.9
