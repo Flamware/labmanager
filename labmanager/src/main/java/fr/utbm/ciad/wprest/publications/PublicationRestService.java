@@ -64,6 +64,19 @@ public class PublicationRestService {
     }
 
 
+
+
+    /**
+     * Retrieves all publications, including both public and private ones.
+     *
+     * <p>This endpoint returns a list of all available publications. If no publications are found,
+     * a 404 Not Found response is returned.</p>
+     *
+     * @return a {@link ResponseEntity} containing a list of {@link PublicationsFrontDto} objects if found,
+     *         or a 404 Not Found response if the list is empty.
+     *
+     * @see PublicationsFrontDto
+     */
     @GetMapping("/all")
     @Operation(summary = "Gets all publications", description = "Gets all publications, either public or private", tags = {"Publication API"})
     @ApiResponses(value = {
@@ -228,6 +241,16 @@ public class PublicationRestService {
         return publications;
     }
 
+    /**
+     * Converts a collection of {@link Publication} objects into a list of {@link PublicationsFrontDto} objects,
+     * applying optional filtering based on year, language, and keywords.
+     *
+     * @param publicationList the collection of {@link Publication} objects to convert
+     * @param year the publication year to filter by (nullable)
+     * @param language the language to filter by (nullable)
+     * @param keywords the keywords to filter by (nullable, comma or semicolon separated)
+     * @return a list of {@link PublicationsFrontDto} objects representing the filtered and mapped publications
+     */
     public List<PublicationsFrontDto> gePublicationsFrontDtos(Collection<Publication> publicationList,
                                                                   Long year,
                                                                   String language,
