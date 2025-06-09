@@ -18,6 +18,7 @@ import java.util.List;
  * @param supervisors          a list of supervisors for the supervised person
  */
 public record SupervisionsDTO(String name,
+                              long supervisedPersonId,
                               PersonOnWebsite supervisedPerson,
                               int year,
                               SupervisorType supervisionType,
