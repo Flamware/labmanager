@@ -5,16 +5,113 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6edae4a-0310-40b0-ac77-b7b5f985ede6" name="Changes" comment="feat: Ajoute .gitignore pour exclure les fichiers IntelliJ IDEA&#10;&#10;Ajoute un fichier `.gitignore` pour exclure les fichiers spécifiques à IntelliJ IDEA du suivi Git. Cela inclut les fichiers de configuration locaux, les fichiers de workspace et les fichiers de données sources, assurant ainsi que seuls les fichiers pertinents du projet sont versionnés.">
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/utbm/ciad/wprest/projects/ProjectRestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/utbm/ciad/wprest/projects/ProjectRestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/utbm/ciad/wprest/projects/data/dto/ProjectDataDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/utbm/ciad/wprest/projects/data/dto/ProjectDataDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/LabManagerApi.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/LabManagerApi.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/log/log.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/log/log3.dat" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/log/log3.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c720.dat" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c720.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c7b0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c7b0.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cb51.dat" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cb51.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cbf1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cbf1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6bcaef23-87f2-4c8e-a1c9-8fdb9a8199e5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6bcaef23-87f2-4c8e-a1c9-8fdb9a8199e5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/db.lck" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/log/log.ctrl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/log/log3.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/log/logmirror.ctrl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c101.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c121.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c130.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c141.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c1e0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c1f1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c20.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c200.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c211.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c2d0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c2e1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c400.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c4d0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c4e1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c4f0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c501.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c51.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c570.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c581.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c590.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c5a1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c5f0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c60.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c601.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c610.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c621.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c630.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c641.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c660.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c671.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c6a0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c6b1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c700.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c71.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c711.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c720.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c730.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c741.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c750.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c761.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c770.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c780.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c7b0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c7c0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c7d1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c800.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c81.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c811.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c820.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c831.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c860.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c871.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c880.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c891.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c8a0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c8b1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c8d0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c8e1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c8f0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c90.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c901.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c971.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c981.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c991.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c9e1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c9f1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/ca01.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/ca1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/ca11.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/ca71.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/ca91.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/caa1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cad1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cae1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/caf1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cb01.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cb51.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cb61.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cb71.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cb81.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cb91.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cba1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cbb1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cbc1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cbf1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cc0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cc01.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cc11.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cc41.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cc51.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cc71.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cc81.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cc91.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/ccb1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/ccc1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/ccd1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cd00.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cd1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cd11.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cf0.dat" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,33 +140,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;Spring Boot.LabManagerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;axel&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "Spring Boot.LabManagerApplication.executor": "Run",
+    "git-widget-placeholder": "DE50-2025",
+    "go.import.settings.migrated": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;derby&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "derby"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\axela\IdeaProjects\labmanager\labmanager\tmp\labmanager-tmp" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="LabManagerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -189,7 +291,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/fr/utbm/ciad/wprest/projects/ProjectRestService.java</url>
-          <line>105</line>
+          <line>106</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
