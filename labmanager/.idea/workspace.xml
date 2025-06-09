@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6edae4a-0310-40b0-ac77-b7b5f985ede6" name="Changes" comment="feat: Ajoute .gitignore pour exclure les fichiers IntelliJ IDEA&#10;&#10;Ajoute un fichier `.gitignore` pour exclure les fichiers spécifiques à IntelliJ IDEA du suivi Git. Cela inclut les fichiers de configuration locaux, les fichiers de workspace et les fichiers de données sources, assurant ainsi que seuls les fichiers pertinents du projet sont versionnés.">
-      <change beforePath="$PROJECT_DIR$/.idea/.copilot-plugin" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.copilot-plugin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6bcaef23-87f2-4c8e-a1c9-8fdb9a8199e5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6bcaef23-87f2-4c8e-a1c9-8fdb9a8199e5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/utbm/ciad/wprest/projects/ProjectRestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/utbm/ciad/wprest/projects/ProjectRestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/utbm/ciad/wprest/projects/data/dto/ProjectDataDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/utbm/ciad/wprest/projects/data/dto/ProjectDataDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/LabManagerApi.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/LabManagerApi.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/log/log.ctrl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/log/log3.dat" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/log/log3.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/log/logmirror.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c720.dat" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c720.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c7b0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/c7b0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cb51.dat" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cb51.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cbf1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/seg0/cbf1.dat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="DE50-2025" />
+        <entry key="$PROJECT_DIR$/.." value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -38,31 +43,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "Spring Boot.LabManagerApplication.executor": "Run",
-    "git-widget-placeholder": "DE50-2025",
-    "go.import.settings.migrated": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;Spring Boot.LabManagerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;axel&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "derby"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;derby&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -178,5 +183,16 @@
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/fr/utbm/ciad/wprest/projects/ProjectRestService.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
