@@ -42,7 +42,7 @@ spring:
 
   datasource:
     driver-class-name: org.apache.derby.jdbc.EmbeddedDriver
-    url: jdbc:derby:./tmp/labmanager-tmp/db
+    url: jdbc:derby:./tmp/labmanager-tmp/db;create=true
     generate-unique-name: false
     username: sa
     password:
