@@ -10,6 +10,7 @@ import fr.utbm.ciad.labmanager.services.member.PersonService;
 import fr.utbm.ciad.labmanager.services.organization.ResearchOrganizationService;
 import fr.utbm.ciad.labmanager.services.publication.PublicationService;
 import fr.utbm.ciad.wprest.data.PersonOnWebsite;
+import fr.utbm.ciad.wprest.publications.data.dto.PublicationsAuthorsDto;
 import fr.utbm.ciad.wprest.publications.data.dto.PublicationsDTO;
 import fr.utbm.ciad.wprest.publications.data.dto.PublicationsFrontDto;
 import io.swagger.v3.oas.annotations.Operation;
@@ -86,7 +87,28 @@ public class PublicationRestService {
             return ResponseEntity.notFound().build();
         }
 
-        List<PublicationsFrontDto> publications = gePublicationsFrontDtos(publicationList, null, null, null);
+        List<PublicationsFrontDto> publications = getPublicationsFrontDtos(publicationList, null, null, null);
+        return ResponseEntity.ok(publications);
+    }
+    
+    @Operation(summary = "Gets the publications of the person for the web", description = "Gets the publications of the person, either public or private", tags = {"Publication API"})
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "The publications of the person", content = @Content(schema = @Schema(implementation = PublicationsDTO.class))),
+            @ApiResponse(responseCode = "400", description = "Bad request if both or neither id and pageId are provided"),
+            @ApiResponse(responseCode = "404", description = "Not Found if no person is found with the provided ID or pageId.")
+    })
+    @GetMapping("/frontpersons")
+    
+    public ResponseEntity<List<PublicationsFrontDto>> getPersonPublicationsFront(
+            @RequestParam(required = true) Long id
+    ) {
+        Person p = personService.getPersonById(id);
+        if (p == null) {
+            return ResponseEntity.notFound().build();
+        }
+        List<Publication> publicationList = publicationService.getPublicationsByPersonId(p.getId());
+        List<PublicationsFrontDto> publications = getPublicationsFrontDtos(publicationList, null, null, null);
+
         return ResponseEntity.ok(publications);
     }
 
@@ -248,7 +270,7 @@ public class PublicationRestService {
      * @param keywords the keywords to filter by (nullable, comma or semicolon separated)
      * @return a list of {@link PublicationsFrontDto} objects representing the filtered and mapped publications
      */
-    public List<PublicationsFrontDto> gePublicationsFrontDtos(Collection<Publication> publicationList,
+    public List<PublicationsFrontDto> getPublicationsFrontDtos(Collection<Publication> publicationList,
                                                                   Long year,
                                                                   String language,
                                                                   String keywords) {
@@ -267,8 +289,8 @@ public class PublicationRestService {
 
             //get the list of authors name and webpageId
             List<Person> authorsList = new ArrayList<>(publication.getAuthors());
-            List<PersonOnWebsite> authorsPersons = authorsList.stream()
-                    .map(author -> new PersonOnWebsite(author.getFullName(), author.getWebPageId()))
+            List<PublicationsAuthorsDto> authorsPersons = authorsList.stream()
+                    .map(author -> new PublicationsAuthorsDto(author.getFullName(), author.getId()))
                     .collect(Collectors.toList());
 
             String title = publication.getTitle();

@@ -2,7 +2,6 @@ package fr.utbm.ciad.wprest.publications.data.dto;
 
 import fr.utbm.ciad.labmanager.data.publication.PublicationLanguage;
 import fr.utbm.ciad.labmanager.data.publication.PublicationType;
-import fr.utbm.ciad.wprest.data.PersonOnWebsite;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -31,7 +30,7 @@ public record PublicationsFrontDto (
             String doi, 
             String issn,
             LocalDate publicationDate,
-            List<PersonOnWebsite> persons,
+            List<PublicationsAuthorsDto> persons,
             String abstractText,
             String extraUrl,
             String dblpUrl,
@@ -40,5 +39,4 @@ public record PublicationsFrontDto (
             PublicationLanguage language,
             List<String> keywords
 ){
-    
 }
