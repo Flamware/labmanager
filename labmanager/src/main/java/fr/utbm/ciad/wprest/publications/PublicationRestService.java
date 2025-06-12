@@ -384,4 +384,18 @@ public class PublicationRestService {
 
         return false;
     }
+
+    @GetMapping("/count")
+    @Operation(summary = "Get number of publications", description = "Count of distinct publications in the last 5 years", tags = {"publication API"})
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Count retrieved successfully")
+    })
+    public ResponseEntity<Long> getPublicationCount() {
+        int currentYear = LocalDate.now().getYear();
+        int startYear = currentYear - 5;
+
+        long count = publicationService.countPublicationsBetweenYears(startYear, currentYear - 1);
+        return ResponseEntity.ok(count);
+    }
+    
 }
