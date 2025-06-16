@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6edae4a-0310-40b0-ac77-b7b5f985ede6" name="Changes" comment="TEMPLATE WORKING DB">
-      <change beforePath="$PROJECT_DIR$/.idea/.copilot-plugin" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.copilot-plugin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/c720.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/c7b0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/cb51.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/cbf1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/log.ctrl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/log3.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/logmirror.ctrl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/utbm/ciad/wprest/conference/ConferenceRestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/utbm/ciad/wprest/conference/ConferenceRestService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/LabManagerApi.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/LabManagerApi.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/db.lck" afterDir="false" />
     </list>
