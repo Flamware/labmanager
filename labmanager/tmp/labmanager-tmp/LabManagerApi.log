@@ -1104,3 +1104,81 @@ Vaadin is running in DEVELOPMENT mode - do not use for production deployments.
 16-06-2025 19:13:38.793 INFO  DispatcherServlet - Completed initialization in 3 ms
 16-06-2025 19:19:22.476 INFO  LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 16-06-2025 19:19:23.050 WARN  DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': java.sql.SQLException: Directory ./tmp/labmanager-tmp/db cannot be removed.
+16-06-2025 19:25:30.009 INFO  LabManagerApplication - Starting LabManagerApplication using Java 24 with PID 30308 (C:\Users\axela\IdeaProjects\labmanager\labmanager\target\classes started by axela in C:\Users\axela\IdeaProjects\labmanager\labmanager)
+16-06-2025 19:25:30.011 INFO  LabManagerApplication - The following 1 profile is active: "dev"
+16-06-2025 19:25:30.082 INFO  ChangeableUrls - The Class-Path manifest attribute in C:\Users\axela\.m2\repository\org\apache\derby\derby\10.16.1.1\derby-10.16.1.1.jar referenced one or more files that do not exist: file:/C:/Users/axela/.m2/repository/org/apache/derby/derby/10.16.1.1/derbyshared.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derby/10.16.1.1/derbyLocale_cs.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derby/10.16.1.1/derbyLocale_de_DE.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derby/10.16.1.1/derbyLocale_es.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derby/10.16.1.1/derbyLocale_fr.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derby/10.16.1.1/derbyLocale_hu.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derby/10.16.1.1/derbyLocale_it.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derby/10.16.1.1/derbyLocale_ja_JP.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derby/10.16.1.1/derbyLocale_ko_KR.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derby/10.16.1.1/derbyLocale_pl.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derby/10.16.1.1/derbyLocale_pt_BR.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derby/10.16.1.1/derbyLocale_ru.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derby/10.16.1.1/derbyLocale_zh_CN.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derby/10.16.1.1/derbyLocale_zh_TW.jar
+16-06-2025 19:25:30.083 INFO  ChangeableUrls - The Class-Path manifest attribute in C:\Users\axela\.m2\repository\org\apache\derby\derbyshared\10.16.1.1\derbyshared-10.16.1.1.jar referenced one or more files that do not exist: file:/C:/Users/axela/.m2/repository/org/apache/derby/derbyshared/10.16.1.1/derbyshared.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derbyshared/10.16.1.1/derbyLocale_cs.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derbyshared/10.16.1.1/derbyLocale_de_DE.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derbyshared/10.16.1.1/derbyLocale_es.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derbyshared/10.16.1.1/derbyLocale_fr.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derbyshared/10.16.1.1/derbyLocale_hu.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derbyshared/10.16.1.1/derbyLocale_it.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derbyshared/10.16.1.1/derbyLocale_ja_JP.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derbyshared/10.16.1.1/derbyLocale_ko_KR.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derbyshared/10.16.1.1/derbyLocale_pl.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derbyshared/10.16.1.1/derbyLocale_pt_BR.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derbyshared/10.16.1.1/derbyLocale_ru.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derbyshared/10.16.1.1/derbyLocale_zh_CN.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derbyshared/10.16.1.1/derbyLocale_zh_TW.jar
+16-06-2025 19:25:30.083 INFO  ChangeableUrls - The Class-Path manifest attribute in C:\Users\axela\.m2\repository\org\apache\derby\derbytools\10.16.1.1\derbytools-10.16.1.1.jar referenced one or more files that do not exist: file:/C:/Users/axela/.m2/repository/org/apache/derby/derbytools/10.16.1.1/derby.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derbytools/10.16.1.1/derbyclient.jar,file:/C:/Users/axela/.m2/repository/org/apache/derby/derbytools/10.16.1.1/derbynet.jar
+16-06-2025 19:25:30.083 INFO  ChangeableUrls - The Class-Path manifest attribute in C:\Users\axela\.m2\repository\xalan\serializer\2.7.3\serializer-2.7.3.jar referenced one or more files that do not exist: file:/C:/Users/axela/.m2/repository/xalan/serializer/2.7.3/xml-apis.jar
+16-06-2025 19:25:30.083 INFO  ChangeableUrls - The Class-Path manifest attribute in C:\Users\axela\.m2\repository\net\rootdev\java-rdfa\1.0.0-BETA1\java-rdfa-1.0.0-BETA1.jar referenced one or more files that do not exist: file:/C:/Users/axela/.m2/repository/net/rootdev/java-rdfa/1.0.0-BETA1/jena-iri-3.16.0.jar,file:/C:/Users/axela/.m2/repository/net/rootdev/java-rdfa/1.0.0-BETA1/slf4j-api-1.7.30.jar,file:/C:/Users/axela/.m2/repository/net/rootdev/java-rdfa/1.0.0-BETA1/java-rdfa-htmlparser-1.0.0-BETA1.jar,file:/C:/Users/axela/.m2/repository/net/rootdev/java-rdfa/1.0.0-BETA1/htmlparser-1.4.16.jar
+16-06-2025 19:25:30.083 INFO  DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+16-06-2025 19:25:30.083 INFO  DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+16-06-2025 19:25:32.207 INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16-06-2025 19:25:32.696 INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 482 ms. Found 32 JPA repository interfaces.
+16-06-2025 19:25:33.792 INFO  TomcatWebServer - Tomcat initialized with port 8080 (https)
+16-06-2025 19:25:33.803 INFO  Http11NioProtocol - Initializing ProtocolHandler ["https-jsse-nio-8080"]
+16-06-2025 19:25:33.808 INFO  StandardService - Starting service [Tomcat]
+16-06-2025 19:25:33.808 INFO  StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+16-06-2025 19:25:33.933 INFO  [/LabManager] - Initializing Spring embedded WebApplicationContext
+16-06-2025 19:25:33.933 INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3850 ms
+16-06-2025 19:25:35.203 INFO  SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+16-06-2025 19:25:35.443 WARN  deprecation - HHH90000025: DerbyDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+16-06-2025 19:25:38.799 INFO  LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16-06-2025 19:25:39.427 INFO  [/LabManager] - Initializing AtmosphereFramework
+16-06-2025 19:25:41.726 INFO  VaadinServletContextInitializer - Search for subclasses and classes with annotations took 1011 ms
+16-06-2025 19:25:42.440 INFO  DevModeStartupListener - Starting dev-mode updaters in C:\Users\axela\IdeaProjects\labmanager\labmanager folder.
+16-06-2025 19:25:42.503 INFO  FullDependenciesScanner - Visited 239 classes. Took 40 ms.
+16-06-2025 19:25:42.505 INFO  BundleValidationUtil - Checking if a development mode bundle build is needed
+16-06-2025 19:25:42.807 INFO  BundleValidationUtil - A development mode bundle build is not needed
+16-06-2025 19:25:42.830 INFO  TaskCopyFrontendFiles - Copying frontend resources from jar files ...
+16-06-2025 19:25:42.915 INFO  TaskCopyFrontendFiles - Visited 24 resources. Took 84 ms.
+16-06-2025 19:25:43.182 INFO  QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+16-06-2025 19:25:46.395 INFO  InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userSecurityService
+16-06-2025 19:25:47.155 INFO  EndpointLinksResolver - Exposing 16 endpoints beneath base path '/management'
+16-06-2025 19:25:48.568 INFO  OptionalLiveReloadServer - LiveReload server is running on port 35729
+16-06-2025 19:25:48.757 INFO  Http11NioProtocol - Starting ProtocolHandler ["https-jsse-nio-8080"]
+16-06-2025 19:25:48.966 INFO  certificate - Connector [https-jsse-nio-8080], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\axela\.keystore] using alias [springboot] with trust store [null]
+16-06-2025 19:25:59.588 INFO  [/LabManager] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16-06-2025 19:25:59.588 INFO  DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+16-06-2025 19:25:59.592 INFO  DispatcherServlet - Completed initialization in 4 ms
+16-06-2025 19:26:00.240 INFO  DefaultDeploymentConfiguration - 
+Vaadin is running in DEVELOPMENT mode - do not use for production deployments.
+16-06-2025 19:26:00.349 INFO  TomcatWebServer - Tomcat started on port 8080 (https) with context path '/LabManager'
+16-06-2025 19:26:00.365 INFO  LabManagerApplication - Started LabManagerApplication in 31.005 seconds (process running for 32.103)
+16-06-2025 19:26:00.384 INFO  JsonDatabaseInitializer - Database initialization is skipped because of lake of data source
+16-06-2025 19:26:00.385 INFO  ServiceLogoDisplayer - 
+16-06-2025 19:26:00.387 INFO  ServiceLogoDisplayer -  .  _____ _____          _____    _           _     
+16-06-2025 19:26:00.387 INFO  ServiceLogoDisplayer -  . / ____|_   _|   /\   |  __ \  | |         | |    
+16-06-2025 19:26:00.387 INFO  ServiceLogoDisplayer -  .| |      | |    /  \  | |  | | | |     __ _| |__  
+16-06-2025 19:26:00.387 INFO  ServiceLogoDisplayer -  .| |      | |   / /\ \ | |  | | | |    / _` | '_ \ 
+16-06-2025 19:26:00.387 INFO  ServiceLogoDisplayer -  .| |____ _| |_ / ____ \| |__| | | |___| (_| | |_) |
+16-06-2025 19:26:00.387 INFO  ServiceLogoDisplayer -  . \_____|_____/_/    \_\_____/  |______\__,_|_.__/ 
+16-06-2025 19:26:00.387 INFO  ServiceLogoDisplayer -  .|  \/  |                                          
+16-06-2025 19:26:00.387 INFO  ServiceLogoDisplayer -  .| \  / | __ _ _ __   __ _  __ _  ___ _ __         
+16-06-2025 19:26:00.387 INFO  ServiceLogoDisplayer -  .| |\/| |/ _` | '_ \ / _` |/ _` |/ _ \ '__|        
+16-06-2025 19:26:00.387 INFO  ServiceLogoDisplayer -  .| |  | | (_| | | | | (_| | (_| |  __/ |           
+16-06-2025 19:26:00.387 INFO  ServiceLogoDisplayer -  .|_|  |_|\__,_|_| |_|\__,_|\__, |\___|_|           
+16-06-2025 19:26:00.387 INFO  ServiceLogoDisplayer -  .                           __/ |                  
+16-06-2025 19:26:00.387 INFO  ServiceLogoDisplayer -  .                          |___/                   
+16-06-2025 19:26:00.387 INFO  ServiceLogoDisplayer -  . version 4.0.0
+16-06-2025 19:26:00.387 INFO  ServiceLogoDisplayer -  . ready
+16-06-2025 19:40:08.972 WARN  SqlExceptionHelper - SQL Warning Code: 10000, SQLState: 01J01
+16-06-2025 19:40:08.972 WARN  SqlExceptionHelper - Database './tmp/labmanager-tmp/db' not created, connection made to existing database instead.
+16-06-2025 19:40:09.013 WARN  SqlExceptionHelper - SQL Warning Code: 10000, SQLState: 01J01
+16-06-2025 19:40:09.014 WARN  SqlExceptionHelper - Database './tmp/labmanager-tmp/db' not created, connection made to existing database instead.
+16-06-2025 19:40:09.019 WARN  SqlExceptionHelper - SQL Warning Code: 10000, SQLState: 01J01
+16-06-2025 19:40:09.019 WARN  SqlExceptionHelper - Database './tmp/labmanager-tmp/db' not created, connection made to existing database instead.
+16-06-2025 19:51:01.091 WARN  ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "test"]
+16-06-2025 19:51:01.246 WARN  ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "test"]
+16-06-2025 19:51:09.723 WARN  ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "test"]
+16-06-2025 19:51:09.817 WARN  ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "test"]
+16-06-2025 19:55:41.368 WARN  SqlExceptionHelper - SQL Warning Code: 10000, SQLState: 01J01
+16-06-2025 19:55:41.369 WARN  SqlExceptionHelper - Database './tmp/labmanager-tmp/db' not created, connection made to existing database instead.
+16-06-2025 19:58:04.133 WARN  SqlExceptionHelper - SQL Warning Code: 10000, SQLState: 01J01
+16-06-2025 19:58:04.134 WARN  SqlExceptionHelper - Database './tmp/labmanager-tmp/db' not created, connection made to existing database instead.
+16-06-2025 19:58:47.768 WARN  SqlExceptionHelper - SQL Warning Code: 10000, SQLState: 01J01
+16-06-2025 19:58:47.768 WARN  SqlExceptionHelper - Database './tmp/labmanager-tmp/db' not created, connection made to existing database instead.
+16-06-2025 20:01:24.325 WARN  SqlExceptionHelper - SQL Warning Code: 10000, SQLState: 01J01
+16-06-2025 20:01:24.325 WARN  SqlExceptionHelper - Database './tmp/labmanager-tmp/db' not created, connection made to existing database instead.
+16-06-2025 20:08:22.272 INFO  LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+16-06-2025 20:08:22.864 WARN  DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': java.sql.SQLException: Directory ./tmp/labmanager-tmp/db cannot be removed.

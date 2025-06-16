@@ -7,8 +7,6 @@
     <list default="true" id="f6edae4a-0310-40b0-ac77-b7b5f985ede6" name="Changes" comment="TEMPLATE WORKING DB">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/utbm/ciad/wprest/conference/ConferenceRestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/utbm/ciad/wprest/conference/ConferenceRestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/LabManagerApi.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/LabManagerApi.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/labmanager-tmp/db/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/labmanager-tmp/db/db.lck" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +16,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="master" />
+        <entry key="$PROJECT_DIR$/.." value="conference" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -207,16 +205,5 @@
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
     <settings-migrated>true</settings-migrated>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/fr/utbm/ciad/wprest/projects/ProjectRestService.java</url>
-          <line>106</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
