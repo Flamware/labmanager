@@ -8,6 +8,7 @@ import fr.utbm.ciad.labmanager.data.jury.JuryType;
 import fr.utbm.ciad.labmanager.data.member.MemberStatus;
 import fr.utbm.ciad.labmanager.data.member.Membership;
 import fr.utbm.ciad.labmanager.data.member.Person;
+import fr.utbm.ciad.labmanager.data.member.PersonRepository;
 import fr.utbm.ciad.labmanager.data.organization.OrganizationAddress;
 import fr.utbm.ciad.labmanager.data.organization.ResearchOrganization;
 import fr.utbm.ciad.labmanager.data.supervision.Supervision;
@@ -78,19 +79,75 @@ public class PersonRestService {
     private final SupervisionService supervisionService;
     private final MembershipService membershipService;
     private final org.springframework.context.support.MessageSourceAccessor messageSourceAccessor;
+    private final PersonRepository personRepository;
 
     public PersonRestService(
             @Autowired PersonService personService,
             @Autowired TeachingService teachingService,
             @Autowired SupervisionService supervisionService,
             @Autowired MembershipService membershipService,
-            @Autowired org.springframework.context.support.MessageSourceAccessor messageSourceAccessor) {
+            @Autowired org.springframework.context.support.MessageSourceAccessor messageSourceAccessor,
+            @Autowired PersonRepository personRepository) {
         this.personService = personService;
         this.teachingService = teachingService;
         this.supervisionService = supervisionService;
         this.membershipService = membershipService;
         this.messageSourceAccessor = messageSourceAccessor;
+        this.personRepository = personRepository;
     }
+
+    @Operation(summary = "Get all persons", description = "Retrieves a list of all persons", tags = {"Person API"})
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "List of all persons")
+    })
+    @GetMapping("/all")
+    public ResponseEntity<List<PersonCardDTO>> getAllPersons() {
+        List<Person> persons = personService.getAllPersons();
+        List<PersonCardDTO> dtoList = persons.stream()
+                .map(this::getPersonCardDto)
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(dtoList);
+    }
+
+    @Operation(summary = "Get total number of persons", description = "Returns the count of all persons", tags = {"Person API"})
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Total number of persons")
+    })
+    @GetMapping("/count")
+    public ResponseEntity<Long> getPersonCount() {
+        long count = personService.countAllPersons();
+        return ResponseEntity.ok(count);
+    }
+
+    @GetMapping("/permanent")
+    @Operation(
+        summary = "Get persons with permanent positions",
+        description = "Returns all persons who have at least one permanent membership",
+        tags = {"Person API"}
+    )
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "List returned successfully")
+    })
+    public ResponseEntity<List<PersonCardDTO>> getPersonsWithPermanentMemberships() {
+        List<Person> persons = personService.getAllPersons(PersonSpecifications.hasPermanentMembership());
+        List<PersonCardDTO> dtoList = persons.stream()
+                .map(this::getPersonCardDto)
+                .collect(Collectors.toList());
+
+        return ResponseEntity.ok(dtoList);
+    }
+
+    @GetMapping("/permanent/count")
+    @Operation(summary = "Count persons with permanent positions", description = "Counts how many persons have at least one permanent membership", tags = {"Person API"})
+    @ApiResponses(value = {
+    @ApiResponse(responseCode = "200", description = "Count returned successfully")
+    })
+    public ResponseEntity<Long> countPersonsWithPermanentMemberships() {
+        long count = personService.countAllPersons(PersonSpecifications.hasPermanentMembership());
+        return ResponseEntity.ok(count);
+    }
+
+
 
     @Operation(summary = "Gets the card of the user", description = "Gets the information of the user that can be displayed in a card", tags = {"Person API"})
     @ApiResponses(value = {

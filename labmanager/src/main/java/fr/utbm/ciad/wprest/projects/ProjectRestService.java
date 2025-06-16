@@ -8,6 +8,7 @@ import fr.utbm.ciad.labmanager.data.project.ProjectStatus;
 import fr.utbm.ciad.labmanager.services.project.ProjectService;
 import fr.utbm.ciad.wprest.data.DateRange;
 import fr.utbm.ciad.wprest.data.PersonOnWebsite;
+import fr.utbm.ciad.wprest.files.FileService;
 import fr.utbm.ciad.wprest.projects.data.dto.ProjectDataDto;
 import fr.utbm.ciad.wprest.projects.data.ProjectLinksData;
 import fr.utbm.ciad.wprest.projects.data.ProjectOrganizationData;
@@ -18,9 +19,12 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
+
 
 import java.time.LocalDate;
 import java.util.*;
@@ -49,9 +53,11 @@ import java.util.stream.Collectors;
 public class ProjectRestService {
 
     ProjectService projectService;
+    FileService fileservice;
 
-    public ProjectRestService(@Autowired ProjectService projectService) {
+    public ProjectRestService(@Autowired ProjectService projectService, @Autowired FileService fileservice) {
         this.projectService = projectService;
+        this.fileservice = fileservice;
     }
 
     /**
@@ -264,5 +270,123 @@ public class ProjectRestService {
 
         return ResponseEntity.ok(getPublicProjectsFromList(new ArrayList<>(projects)));
     }
+
+    /**
+     * Get all public projects that have a logo (logo != null).
+     * @return the list of projects with logo
+     */
+    @Operation(summary = "Gets all public projects with logo",
+        description = "Gets the list of public projects where logo is not null",
+        tags = {"Project API"},
+        responses = {
+                @ApiResponse(responseCode = "200", description = "The list of public projects with logos",
+                        content = @Content(schema = @Schema(implementation = ProjectDataDto.class), 
+                        array = @ArraySchema(schema = @Schema(implementation = ProjectDataDto.class)))),
+                @ApiResponse(responseCode = "404", description = "No projects with logo found"),
+        })
+    @GetMapping("/withLogo")
+    public ResponseEntity<List<ProjectDataDto>> getProjectsWithLogo() {
+        List<Project> projects = projectService.getAllProjects();
+
+        // Filtrer les projets publics avec logo non null
+        List<ProjectDataDto> projectsWithLogo = projects.stream()
+                .filter(p -> !p.isConfidential()
+                        && p.getStatus() == ProjectStatus.ACCEPTED
+                        && p.getPathToLogo() != null)
+                .map(this::getProjectData)
+                .collect(Collectors.toList());
+
+        if (projectsWithLogo.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+
+        return ResponseEntity.ok(projectsWithLogo);
+    }
+
+    @Operation(summary = "Get logo image for project",
+        description = "Returns the image file for a project's logo",
+        tags = {"Project API"},
+        responses = {
+            @ApiResponse(responseCode = "200", description = "Logo image returned",
+                content = @Content(mediaType = "image/jpeg")),
+            @ApiResponse(responseCode = "404", description = "Logo not found"),
+        })
+    @GetMapping("/{id}/logo")
+    public ResponseEntity<Resource> getProjectLogo(@PathVariable Long id) {
+        Optional<Project> projectOpt = Optional.ofNullable(projectService.getProjectById(id));
+        
+        if (projectOpt.isEmpty() || projectOpt.get().getPathToLogo() == null) {
+            return ResponseEntity.notFound().build();
+        }
+
+        Project project = projectOpt.get();
+        Resource logoResource = fileservice.loadAsResource(project.getPathToLogo());
+
+        if (logoResource == null || !logoResource.exists()) {
+            return ResponseEntity.notFound().build();
+        }
+
+        MediaType mediaType = MediaType.IMAGE_JPEG; // Améliorable dynamiquement
+        return ResponseEntity.ok()
+                .contentType(mediaType)
+                .body(logoResource);
+    }
+
+    @GetMapping("/stats/finished")
+    public ResponseEntity<Integer> getFinishedProjects() {
+        List<Project> projects = projectService.getAllProjects();
+
+        int count = 0;
+        LocalDate now = LocalDate.now();
+
+        for (Project p : projects) {
+            Integer duration = p.getDuration();
+            if (p.getStartDate() != null && duration != null && duration > 0) {
+                LocalDate endDate = p.getStartDate().plusMonths(p.getDuration());
+                if (endDate.isBefore(now)) {
+                    count++;
+                }
+            }
+        }
+
+        return ResponseEntity.ok(count);
+    }
+
+    @GetMapping("/stats/ongoing")
+    public ResponseEntity<Integer> getOngoingProjects() {
+        List<Project> projects = projectService.getAllProjects();
+
+        int count = 0;
+        LocalDate now = LocalDate.now();
+
+        for (Project p : projects) {
+            Integer duration = p.getDuration();
+            if (p.getStartDate() != null && duration != null && duration > 0) {
+                LocalDate endDate = p.getStartDate().plusMonths(p.getDuration());
+                if (!endDate.isBefore(now)) {
+                    count++;
+                }
+            }
+        }
+
+        return ResponseEntity.ok(count);
+    }
+
+    @GetMapping("/stats/started-this-year")
+    public ResponseEntity<Integer> getProjectsStartedThisYear() {
+        List<Project> projects = projectService.getAllProjects();
+
+        int currentYear = LocalDate.now().getYear();
+        int count = 0;
+
+        for (Project p : projects) {
+            if (p.getStartDate() != null && p.getStartDate().getYear() == currentYear) {
+                count++;
+            }
+        }
+
+        return ResponseEntity.ok(count);
+    }
+
 
 }

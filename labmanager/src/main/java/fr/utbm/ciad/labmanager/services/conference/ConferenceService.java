@@ -30,6 +30,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 import java.util.TreeSet;
@@ -45,6 +46,8 @@ import fr.utbm.ciad.labmanager.data.conference.ConferenceQualityAnnualIndicators
 import fr.utbm.ciad.labmanager.data.conference.ConferenceQualityAnnualIndicatorsRepository;
 import fr.utbm.ciad.labmanager.data.conference.ConferenceRepository;
 import fr.utbm.ciad.labmanager.data.journal.JournalQualityAnnualIndicators;
+import fr.utbm.ciad.labmanager.data.publication.AbstractConferenceBasedPublication;
+import fr.utbm.ciad.labmanager.data.publication.Publication;
 import fr.utbm.ciad.labmanager.services.AbstractEntityService;
 import fr.utbm.ciad.labmanager.services.DeletionStatus;
 import fr.utbm.ciad.labmanager.utils.HasAsynchronousUploadService;
@@ -756,5 +759,20 @@ public class ConferenceService extends AbstractEntityService<Conference> {
 	public record ConferenceRankingUpdateInformation(Conference conference, CoreRanking ranking) {
 		//
 	}
+
+	public long countConferencesBetweenYears(int startYear, int endYear) {
+    // Assuming Conference has qualityIndicators or some date field to filter by year
+    List<Conference> conferences = conferenceRepository.findAll();
+
+    return conferences.stream()
+        .filter(conf -> {
+            // Example: filter by year if you have a year attribute, or
+            // if you have annual indicators, check if any indicator year is between startYear and endYear
+            return conf.getQualityIndicators().keySet().stream()
+                .anyMatch(year -> year >= startYear && year <= endYear);
+        })
+        .count();
+}
+
 
 }

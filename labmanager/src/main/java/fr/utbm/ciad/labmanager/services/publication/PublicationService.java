@@ -329,6 +329,16 @@ public class PublicationService extends AbstractPublicationService {
 		return this.publicationRepository.findAll();
 	}
 
+	/** Replies the number of publications between two years
+	 * 
+	 * @param startYear the start year for the search
+	 * @param endYear the end year for the search
+	 */
+	public long countPublicationsBetweenYears(int startYear, int endYear) {
+        // You can use a custom query or a method provided by JPA repository
+        return publicationRepository.countByPublicationYearBetween(startYear, endYear);
+    }
+
 	/** Replies all the publications from the database.
 	 *
 	 * @param filter the filter of publications.

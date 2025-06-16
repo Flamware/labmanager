@@ -1154,4 +1154,9 @@ public class JournalService extends AbstractEntityService<Journal> {
 		//
 	}
 
+    public Journal findByIssn(String issn) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'findByIssn'");
+    }
+
 }
