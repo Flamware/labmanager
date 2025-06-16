@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9821670a-d0e0-45a1-b4c8-b0878b1905dc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/labmanager/.idea/.copilot-plugin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/labmanager/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/c720.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/labmanager/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/c7b0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/labmanager/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/cb51.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/labmanager/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/cbf1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/labmanager/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/log.ctrl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/labmanager/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/log3.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/labmanager/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/logmirror.ctrl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/labmanager/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/labmanager/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2025_11_22__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/labmanager/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/labmanager/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labmanager/tmp/labmanager-tmp/LabManagerApi.log" beforeDir="false" afterPath="$PROJECT_DIR$/labmanager/tmp/labmanager-tmp/LabManagerApi.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labmanager/tmp/labmanager-tmp/db/db.lck" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2yUuTcWt3KS3lgzqlSMe1gf78zP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "git-widget-placeholder": "DE50-2025",
+    "go.import.settings.migrated": "true",
+    "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9821670a-d0e0-45a1-b4c8-b0878b1905dc" name="Changes" comment="" />
+      <created>1749901481470</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1749901481470</updated>
+      <workItem from="1749901482577" duration="137000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>
