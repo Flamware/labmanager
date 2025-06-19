@@ -332,6 +332,53 @@ public class ProjectRestService {
                 .body(logoResource);
     }
 
+    @Operation(summary = "Get image paths for project",
+        description = "Returns a list of image filenames or paths",
+        tags = {"Project API"})
+    @GetMapping("/{id}/image-paths")
+    public ResponseEntity<List<String>> getPathsToImages(@PathVariable Long id) {
+        Optional<Project> projectOpt = Optional.ofNullable(projectService.getProjectById(id));
+        if (projectOpt.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+
+        Project project = projectOpt.get();
+        List<String> imagePaths = project.getPathsToImages(); // you need to store this list somewhere
+
+        return ResponseEntity.ok(imagePaths);
+    }
+
+    @GetMapping("/{id}/images/{index}")
+    public ResponseEntity<Resource> getProjectImageByIndex(@PathVariable Long id, @PathVariable int index) {
+        Optional<Project> projectOpt = Optional.ofNullable(projectService.getProjectById(id));
+
+        if (projectOpt.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+
+        Project project = projectOpt.get();
+        List<String> imagePaths = project.getPathsToImages();
+
+        if (imagePaths == null || index < 0 || index >= imagePaths.size()) {
+            return ResponseEntity.notFound().build();
+        }
+
+        String imagePath = imagePaths.get(index);
+        Resource imageResource = fileservice.loadAsResource(imagePath);
+
+        if (imageResource == null || !imageResource.exists()) {
+            return ResponseEntity.notFound().build();
+        }
+
+        // Optionally detect the media type dynamically
+        MediaType mediaType = MediaType.IMAGE_JPEG; // You can enhance this to detect PNG, etc.
+
+        return ResponseEntity.ok()
+                .contentType(mediaType)
+                .body(imageResource);
+    }
+
+
     @GetMapping("/stats/finished")
     public ResponseEntity<Integer> getFinishedProjects() {
         List<Project> projects = projectService.getAllProjects();

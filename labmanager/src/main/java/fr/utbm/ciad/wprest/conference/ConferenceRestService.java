@@ -15,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.*;
 
 /**
@@ -84,8 +85,18 @@ public class ConferenceRestService {
 
     }
 
+    @GetMapping("/count")
+    @Operation(summary = "Get number of conferences", description = "Count of distinct conferences in the last 5 years", tags = {"Conference API"})
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Count retrieved successfully")
+    })
+    public ResponseEntity<Long> getConferenceCount() {
+        int currentYear = LocalDate.now().getYear();
+        int startYear = currentYear - 5;  // last 5 years, e.g. 2020-2024
 
-
+        long count = conferenceService.countConferencesBetweenYears(startYear, currentYear - 1);
+        return ResponseEntity.ok(count);
+    }
 
 
     private  List<ConferenceDTO> conferenceToConferenceDTO( Collection<Conference> conferencelist){
